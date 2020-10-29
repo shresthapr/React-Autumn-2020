@@ -1,0 +1,12 @@
+.animalCard{
+  background: rgb(132, 202, 125);
+  border-radius: 5px;
+  padding: 1rem;
+  box-shadow: 0 0 5px black;
+
+}
+
+.animalCard img{
+ max-height: 200px;
+ 
+}

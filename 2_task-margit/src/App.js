@@ -1,9 +1,14 @@
 import React from "react";
+import Animal from './Component/Animal/Animal';
+import "./App.css";
 
 const App = () => {
   return (
-    <div>
-      <h1>Hello World!</h1>
+    <div className="cards">
+
+      <Animal name="Elephant" img="" />
+      <Animal name="Lion" img="" />
+      <Animal name="Zebra" img="" />
     </div>
   );
 };
