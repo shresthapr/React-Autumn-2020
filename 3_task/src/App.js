@@ -1,4 +1,10 @@
 import React, { Component } from 'react';
+import './App.css';
+import Header from './component/header/header';
+import Footer from './component/footer/footer';
+import Circle from './component/circle/circle';
+import './component/circle/circle.css';
+
 
 class App extends Component {
   state = {
@@ -17,17 +23,23 @@ class App extends Component {
   };
   resetHandler = () => {
     this.setState({ likes: 0 })
-    console.log('resetHandler was clicked');
+
   };
 
-  resetLi
+
   render() {
     return (
       <div>
-        <h1>Total likes: {this.state.likes}</h1>
-        <button onClick={this.addHandler}>Add one</button>
-        <button onClick={this.removeHandler}>Remove one</button>
-        <button onClick={this.resetHandler}>Reset</button>
+        <Header />
+
+        <Circle />
+        <div className="likesbuttons">
+          <h1>Total likes: {this.state.likes}</h1>
+          <button onClick={this.addHandler}>Add one</button>
+          <button onClick={this.removeHandler}>Remove one</button>
+          <button onClick={this.resetHandler}>Reset</button>
+        </div>
+        <Footer />
       </div>
     );
   }
