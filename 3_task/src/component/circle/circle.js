@@ -4,8 +4,12 @@ import './circle.css';
 class Circle extends Component {
 
   render() {
+    const { isEven, color, likes } = this.props
     return (
-      <div className="circle-div">
+      <div style={{ backgroundColor: this.props.color }}
+        className={'myCircle' + (isEven ? 'even' : 'odd')}>
+
+
 
       </div>
 

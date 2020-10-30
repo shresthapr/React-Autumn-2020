@@ -1,8 +1,17 @@
-.circle-div{
+.myCircleeven{
   height: 200px;
   width: 200px;
   border-radius: 50%;
   background-color: wheat;
+  padding: 1rem;
+  margin: 1rem auto;
+  margin-top: 3rem;
+}
+.myCircleodd{
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+
   padding: 1rem;
   margin: 1rem auto;
   margin-top: 3rem;
