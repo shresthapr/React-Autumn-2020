@@ -4,4 +4,4 @@ This tasks mimics the business college page where peoples likes vote are counted
 
 - The votes can be prevented from auto reset on page reload to display likes on the page.
 
-![task-4-outcome](task-4.png)
+![4_task-outcome](task-4.png)
