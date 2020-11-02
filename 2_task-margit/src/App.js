@@ -5,9 +5,12 @@ import "./App.css";
 class App extends Component {
   state = {
     animals: [
-      { id: 1, name: "Elephant", img: "https://source.unsplash.com/0prglfrYY08" },
+      { id: 1, name: "Elephant", img: "https://source.unsplash.com/P0932ANXT0g" },
       { id: 2, name: "Lion", img: "https://source.unsplash.com/P0932ANXT0g" },
-      { id: 3, name: "Zebra", img: "https://source.unsplash.com/Y0fha67MdO4" }
+      { id: 3, name: "Zebra", img: "https://source.unsplash.com/Y0fha67MdO4" },
+      { id: 4, name: "Elephant", img: "https://source.unsplash.com/60XLoOgwkfA" },
+      { id: 5, name: "Lion", img: "https://source.unsplash.com/P0932ANXT0g" },
+      { id: 6, name: "Zebra", img: "https://source.unsplash.com/Y0fha67MdO4" }
     ]
   };
   render() {
