@@ -1,21 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import Box from './box.js';
+import Newapp from './App';
+import Newbox from './box.js';
 
 
 
 
 ReactDOM.render(
-    <App />,
+  <Newapp />,
   document.getElementById('root'),
- 
+
 );
 
 
 ReactDOM.render(
-  <Box />,
+  <Newbox />,
   document.getElementById('root2'),
 );
 
