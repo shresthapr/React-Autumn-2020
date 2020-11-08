@@ -1,0 +1,36 @@
+.circle{
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background-color: #f4f4f4;
+  display: inline-block;
+  margin: 1rem;
+  box-shadow:  0 0 5px #333;
+  cursor:crosshair;
+}
+.circle p{
+  text-align: center;
+  padding: 1rem;
+  font-size: 2rem;
+  color: black;
+}
+
+.green{
+  background-color: green;
+}
+.blue{
+  background-color: blue;
+}
+.red{
+  background-color: red;
+}
+.yellow{
+  background-color: yellow;
+}
+
+.circle.active{
+  background-image: url("./catch.png");
+  object-fit: scale-down;
+  background-position: center;
+
+}

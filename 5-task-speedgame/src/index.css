@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+
+body {
+  margin: 12rem;
+ font-family: 'Monoton', cursive;
+ background-image: linear-gradient(
+   to right top,
+   #c539d4,
+   #7ee41e,
+   #e6e334,
+   #33e4e4,
+   #1737eb
+ );
+ background-attachment: fixed;
+ text-align: center;
+}
+
+button{
+  font-family: inherit;
+  padding: 1rem;
+  margin: 1rem;
+  background: white;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  box-shadow: 3px 3px 5px black;
+  font-size: 1rem;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
