@@ -1,61 +1,60 @@
 import React, { Component } from 'react';
-import './App.css';
 import Form from './Component/form/form';
 import View from './Component/view/view';
 import Popup from './Component/popup/popup';
-
+import Circle from './Component/display/Circle';
+import './App.css';
 
 class App extends Component {
   state = {
-    showPopup: false,
     firstname: '',
     lastname: '',
-    phonenumber: '',
+    phone: '',
     message: '',
-    role: ''
-
+    role: '',
+    showPop: false,
   }
-
-  changeHandler = (event) => {
-    console.log('Hello')
+  changeHandler = (any) => {
+    console.log(any)
     this.setState({
-
-      [event.target.name]: event.target.value,
-    });
+      [any.target.name]: any.target.value,
+    })
+    console.log(any.target.value)
   }
 
-  submitHandler = (event) => {
-    this.setState({ showPopup: true });
+  showPopup = (event) => {
+    this.setState({ showPop: true });
     event.preventDefault();
   }
   render() {
+    const isEven = this.state.phone % 2 === 0;
+    const bgColor = isEven ? 'green' : 'yellow';
+    const type = isEven ? 'Even' : 'Odd';
 
     return (
       <div>
-        <Form newChange={this.changeHandler} submit={this.submitHandler} />
+
+        <Form change={this.changeHandler} hit={this.showPopup} />
         <View
           firstname={this.state.firstname}
           lastname={this.state.lastname}
-          lastname={this.state.lastname}
-          phonenumber={this.state.phonenumber}
+          phone={this.state.phone}
           message={this.state.message}
-          role={this.state.role}
-        />
+          role={this.state.role} />
 
-        {this.state.showPopup && <Popup
+        {this.state.showPop && <Popup
           firstname={this.state.firstname}
           lastname={this.state.lastname}
-          phonenumber={this.state.phonenumber}
+          phone={this.state.phone}
           message={this.state.message}
-          role={this.state.role}
-        />}
+          role={this.state.role} />}
 
-      </div >
+        <Circle isEven={isEven} color={bgColor}
+          numtype={type} />
+
+      </div>
     );
   }
 }
 
-
 export default App;
-
-

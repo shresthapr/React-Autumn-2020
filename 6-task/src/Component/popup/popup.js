@@ -1,24 +1,26 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './popup.css';
 
-const quitOperation = () => {
+
+const close = () => {
   window.location.reload();
 }
-
-const PopUp = (props) => {
-  return <div className="popupoverlay">
-    <h1> Your note:</h1>
-    <div class="popupnote">
-      <p>First name :&nbsp;<span>{props.firstname}</span></p>
-      <p>Last name :&nbsp;<span>{props.lastname}</span></p>
-      <p>Phone number :&nbsp;<span>{props.phonenumber}</span></p>
-      <p>Message :&nbsp;<span>{props.message}</span></p>
-      <p>Role :&nbsp;<span>{props.role}</span></p>
-    </div>
-    <div>
-      <button id="closebtn" onClick={quitOperation}>Close</button>
-    </div>
-  </div>
+class Popup extends Component {
+  render() {
+    return (
+      <div className="overlay">
+        <div className="popup">
+          <h1>This is the Popup</h1>
+          <p>First Name: <span>{this.props.firstname}</span></p>
+          <p>Last Name:<span>{this.props.lastname}</span> </p>
+          <p>Phone: <span>{this.props.phone}</span></p>
+          <p>Message:<span>{this.props.message}</span> </p>
+          <p>Role: <span>{this.props.role}</span></p>
+          <button onClick={() => close()}>close</button>
+        </div>
+      </div>
+    );
+  }
 }
 
-export default PopUp;
+export default Popup;

@@ -1,40 +1,44 @@
 
-import React from 'react';
-const Form = (props) => {
-  return <div className="myform">
-    <form >
-      <div>
-        <label forhtml="firstname" >First Name:</label>
-        <input type="text" name="firstname" onChange={props.newChange} placeholder="Your Name" required />
-      </div>
-      <div>
-        <label forhtml="lastname">Last Name:</label>
-        <input type="text" name="lastname" onChange={props.newChange} required />
-      </div>
-      <div>
-        <label forhtml="phonenumber">Phone Number:</label>
-        <input type="text" name="phonenumber" onChange={props.newChange} required />
-      </div>
-      <div>
-        <label forhtml="message">Message:</label>
-        <textarea type="text" name="message" onChange={props.newChange} rows="2" cols="30" required />
-      </div>
-      <div>
-        <label forhtml="role">Role:</label>
-        <select name="role" value={props.role} onChange={props.newChange}>
-          <option value="Teacher" >Teacher </option>
-          <option value="Instructor">Instructor </option>
-          <option value="Tutor" >Tutor </option>
-        </select>
-      </div>
-    </form>
+import React, { Component } from 'react';
 
-    <div>
-      <button type="submit" id="submitbtn" onClick={props.submit} >Send</button>
-    </div>
-  </div >
+
+class form extends Component {
+  render() {
+    return (
+      <div className="myform">
+        <form onSubmit={this.props.hit}>
+          <div>
+            <label forhtml="firstname">Firstname</label>
+            <input type="text" name="firstname" onChange={this.props.change} required />
+          </div>
+          <div>
+            <label forhtml="lastname">Lastname</label>
+            <input type="text" name="lastname" onChange={this.props.change} required />
+          </div>
+          <div>
+            <label forhtml="phonenumber">Phone</label>
+            <input type="text" name="phone" onChange={this.props.change} required />
+          </div>
+          <div>
+            <label forhtml="message">Message</label>
+            <input type="textarea" name="message" rows="2" cols="30" onChange={this.props.change} required />
+          </div>
+          <div>
+            <label forhtml="role">Role</label>
+            <select name="role" onChange={this.props.change}>
+              <option value=""></option>
+              <option value="Teacher">Teacher</option>
+              <option value="Student">Student</option>
+              <option value="Administrator">Administrator</option>
+            </select>
+          </div>
+          <input type="submit" value="Send" />
+        </form>
+
+
+      </div>
+    );
+  }
 }
 
-export default Form;
-
-
+export default form;
